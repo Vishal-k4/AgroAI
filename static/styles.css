@@ -1,0 +1,16 @@
+body {
+    background-image: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?cs=srgb&dl=pexels-%C3%A1kos-szab%C3%B3-440731.jpg&fm=jpg'); /* Specify the path to your agriculture background image */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+}
+
+.chat-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Add opacity to the chat container */
+    padding: 20px; /* Add padding for better readability */
+}
+
+.chatbot-area {
+    background-color: rgba(255, 255, 255, 0.8); /* Add opacity to the chatbot area */
+    padding: 20px; /* Add padding for better readability */
+     border-radius: 15px;
+}

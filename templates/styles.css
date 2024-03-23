@@ -1,0 +1,10 @@
+body {
+    background-image: url('/home/kirito/cam/templates/agri.jpg'); /* Specify the path to your agriculture background image */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+}
+
+.chat-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Add opacity to the chat container */
+    padding: 20px; /* Add padding for better readability */
+}
