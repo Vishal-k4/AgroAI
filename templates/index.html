@@ -38,13 +38,14 @@
                 data: { user_input: userInput },
                 success: function(response) {
                     var botResponse = response.bot_response;
-                    botResponse=botResponse[0].generated_text;
+                    botResponse=botResponse;
                     botResponse = botResponse.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+                    botResponse = botResponse.replace(/\*/g, '');
 
                     if (typeof botResponse === 'object') {
 
 
-                        botResponse = JSON.stringify(botResponse[0]['generated_text']);
+                        botResponse = JSON.stringify(botResponse);
                     }
 
                     $('#chat-container').append('<p><strong>AgroAI:</strong> ' + botResponse + '</p>');
