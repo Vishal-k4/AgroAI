@@ -4,7 +4,7 @@ from deep_translator import GoogleTranslator
 #from dotenv import load_dotenv
 from langdetect import detect
 import os
-load_dotenv()
+#load_dotenv()
 #API_URL = "https://api-inference.huggingface.co/models/benkimz/agbrain"
 #headers = {"Authorization": "Bearer xxxxxxxxxxxxxxxxxxxx"}
 #API_URL=
