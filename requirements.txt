@@ -1,0 +1,6 @@
+flask
+requests
+deep_translator
+dotenv
+langdetect
+os
