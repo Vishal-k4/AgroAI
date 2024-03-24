@@ -48,6 +48,7 @@
                     }
 
                     $('#chat-container').append('<p><strong>AgroAI:</strong> ' + botResponse + '</p>');
+                    $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
                 },
                 dataType: 'json' // Specify JSON dataType
             });
