@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request,jsonify
 import requests
 from deep_translator import GoogleTranslator
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from langdetect import detect
 import os
 load_dotenv()
 #API_URL = "https://api-inference.huggingface.co/models/benkimz/agbrain"
 #headers = {"Authorization": "Bearer xxxxxxxxxxxxxxxxxxxx"}
-
+#API_URL=
 API_URL = os.getenv("API_URL")
 headers=os.getenv('headers')
 app = Flask(__name__)
