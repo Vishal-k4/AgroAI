@@ -8,7 +8,7 @@ import os
 #API_URL = "https://api-inference.huggingface.co/models/benkimz/agbrain"
 #headers = {"Authorization": "Bearer xxxxxxxxxxxxxxxxxxxx"}
 API_URL = "https://api-inference.huggingface.co/models/google/gemma-7b-it"
-headers = "{"Authorization": "Bearer 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"}"
+headers = {"Authorization": "Bearer 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"}
 
 #API_URL = os.getenv("API_URL")
 #headers=os.getenv('headers')
