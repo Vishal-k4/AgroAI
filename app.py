@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request,jsonify
 import requests
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 #API_URL = "https://api-inference.huggingface.co/models/benkimz/agbrain"
-#headers = {"Authorization": "Bearer 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"}
+#headers = {"Authorization": "Bearer xxxxxxxxxxxxxxxxxxxx"}
 
-
-API_URL = "https://api-inference.huggingface.co/models/google/gemma-7b-it"
-headers = {"Authorization": "Bearer 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"}
+API_URL = os.getenv("API_URL")
+headers=os.getenv('headers')
 app = Flask(__name__)
 
 
