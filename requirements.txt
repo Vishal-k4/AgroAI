@@ -4,5 +4,5 @@ deep_translator
 langdetect
 gunicorn
 speechRecognition
-pyaudio
+
 
