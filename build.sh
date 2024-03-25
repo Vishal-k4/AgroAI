@@ -1,2 +1,3 @@
-sudo apt-get install portaudio19-dev python3-dev
+sudo pacman -S portaudio python-pyaudio
+
 pip install -r requirements.txt --break-system-packages
