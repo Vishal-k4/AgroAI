@@ -29,6 +29,39 @@
 
      $('#speech-button').click(function() {
             // Send an AJAX request to the Flask server endpoint for speech-to-text
+             // Event listener for speech button click
+            $('#speech-button').click(function() {
+                // Request microphone access
+                navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(function(stream) {
+                    // Create a new SpeechRecognition object
+                    const recognition = new SpeechRecognition();
+                    // Set language (optional)
+                    recognition.lang = 'en-US';
+                    // Start speech recognition
+                    recognition.start();
+                    // Event listener for result
+                    recognition.onresult = function(event) {
+                        // Get transcript from the event results
+                        const transcript = event.results[0][0].transcript;
+                        // Log transcript to console (for testing)
+                        console.log('Transcript:', transcript);
+                        // Append transcript to chat container
+                        $('#chat-container').append('<p><strong>You (Speech):</strong> ' + transcript + '</p>');
+                        $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
+                        // Send transcript to server for processing
+                        sendSpeechInput(transcript);
+                    };
+                    // Event listener for error
+                    recognition.onerror = function(event) {
+                        console.error('Speech recognition error:', event.error);
+                    };
+                })
+                .catch(function(error) {
+                    console.error('Error accessing microphone:', error);
+                });
+            });
+
             $.ajax({
                 url: '/speech-to-text',
                 method: 'POST',
