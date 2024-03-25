@@ -97,6 +97,6 @@ def speech_to_text():
        return jsonify({'bot_response': bot_response})
     except Exception as e:
         print('Error during speech-to-text:', str(e))
-        return jsonify({'bot_response': 'Sorry i could not catch up, can you please say again'})
+        return jsonify({'bot_response': "'Sorry i could not catch up, can you please say again',str(e)"})
 if __name__ == "__main__":
     app.run(debug=True)
