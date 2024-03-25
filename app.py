@@ -75,8 +75,8 @@ def speech_to_text():
                 print("Listening...")
                 recognizer.adjust_for_ambient_noise(source)
 
-                # Capture the audio input from the user
-                audio = recognizer.listen(source)
+                #Capture the audio input from the user
+                audio = recognizer.listen(source,timeout=10)
 
             try:
                 print("Recognizing speech...")
