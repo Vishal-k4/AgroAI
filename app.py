@@ -7,7 +7,7 @@ import os
 #load_dotenv()
 #API_URL = "https://api-inference.huggingface.co/models/benkimz/agbrain"
 #headers = {"Authorization": "Bearer xxxxxxxxxxxxxxxxxxxx"}
-API_URL = "https://api-inference.huggingface.co/models/google/gemma-7b-it"
+API_URL = "https://api-inference.huggingface.co/models/google/gemma-7b"
 headers = {"Authorization": "Bearer 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"}
 
 #API_URL = os.getenv("API_URL")
